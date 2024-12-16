@@ -7,9 +7,8 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
-import communicate from '@/images/screenshots/communicate_2.png'
-import screenshotPayroll from '@/images/screenshots/payroll.png'
-import calculateImage from '@/images/screenshots/calculate_2.png'
+import communicate from '@/images/screenshots/communicate.png'
+import calculateImage from '@/images/screenshots/calculate.png'
 import search from '@/images/screenshots/search.png'
 
 const features = [

@@ -1,8 +1,7 @@
 import clsx from 'clsx'
 import Image, { StaticImageData } from 'next/image'
 
-import { Button } from '@/components/Button'
-import calculateImage from '@/images/screenshots/calculate_2.png'
+import calculateImage from '@/images/screenshots/calculate.png'
 import jamie from '@/images/jamie.png'
 import { Container } from '@/components/Container'
 
