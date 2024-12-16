@@ -6,53 +6,55 @@ import backgroundImage from '@/images/background-faqs.jpg'
 const faqs = [
   [
     {
-      question: 'Does TaxPal handle VAT?',
+      question: 'How much does OpenFire cost?',
       answer:
-        'Well no, but if you move your company offshore you can probably ignore it.',
+        'OpenFire is a fully open-source project. Downloading and using the software is completely free and entirely unrestricted.',
     },
     {
-      question: 'Can I pay for my subscription via purchase order?',
-      answer: 'Absolutely, we are happy to take your money in all forms.',
+      question: 'What are the restrictions of use?',
+      answer: (
+        <p>
+          OpenFire is licensed under the MIT license, so there are no
+          restrictions. For more information, see the{' '}
+          <a
+            href="https://github.com/fire-library/openfire/blob/openfire-v0.1.9/LICENSE.txt"
+            className="text-blue-600"
+          >
+            license
+          </a>
+          .
+        </p>
+      ),
     },
     {
-      question: 'How do I apply for a job at TaxPal?',
-      answer:
-        'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
+      question: 'How can I get involved?',
+      answer: (
+        <p>
+          In a whole host of ways! You can contribute to the codebase, report
+          bugs, suggest features, or even just spread the word. If you are
+          interested in having a chat, please reach out to us. See Contact Us
+          below.
+        </p>
+      ),
     },
   ],
   [
     {
-      question: 'What was that testimonial about tax fraud all about?',
+      question:
+        'The method I need / want is not in the software, what can I do?',
       answer:
-        'TaxPal is just a software application, ultimately your books are your responsibility.',
+        "Great! We are always looking for new ideas and ways to improve. Please reach out to us and let us know what you need. We'll do our best to make it happen.",
     },
     {
       question:
-        'TaxPal sounds horrible but why do I still feel compelled to purchase?',
+        'Will OpenFire always be free, or will you start charging in the future?',
       answer:
-        'This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.',
+        "OpenFire will always be free. We are committed to open source and believe in removing barriers, not building them. If we can build it at no cost to us, we'll provide it at no cost to you.",
     },
     {
-      question:
-        'I found other companies called TaxPal, are you sure you can use this name?',
+      question: 'How often are new methods added?',
       answer:
-        'Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.',
-    },
-  ],
-  [
-    {
-      question: 'How do you generate reports?',
-      answer:
-        'You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.',
-    },
-    {
-      question: 'Can we expect more inventory features?',
-      answer: 'In life it’s really better to never expect anything at all.',
-    },
-    {
-      question: 'I lost my password, how do I get into my account?',
-      answer:
-        'Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.',
+        "We are nowhere near finished. The field is so diverse that we have years of work ahead of us. We're constantly adding more. If you have a specific method you'd like to see, please let us know.",
     },
   ],
 ]
@@ -80,14 +82,10 @@ export function Faqs() {
           >
             Frequently asked questions
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-700">
-            If you can’t find what you’re looking for, email our support team
-            and if you’re lucky someone will get back to you.
-          </p>
         </div>
         <ul
           role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3"
+          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2"
         >
           {faqs.map((column, columnIndex) => (
             <li key={columnIndex}>
@@ -97,7 +95,9 @@ export function Faqs() {
                     <h3 className="font-display text-lg leading-7 text-slate-900">
                       {faq.question}
                     </h3>
-                    <p className="mt-4 text-sm text-slate-700">{faq.answer}</p>
+                    <div className="mt-4 text-sm text-slate-700">
+                      {faq.answer}
+                    </div>
                   </li>
                 ))}
               </ul>

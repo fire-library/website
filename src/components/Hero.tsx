@@ -50,7 +50,7 @@ const buttonLink = (os: string) => {
     return links.platforms['darwin-aarch64'].url
   if (os === 'MacOS (Intel)') return links.platforms['darwin-x86_64'].url
   if (os === 'Linux') return links.platforms['linux-x86_64'].url
-  return ''
+  return 'https://github.com/fire-library/openfire/releases/latest'
 }
 export function Hero() {
   const [os, setOs] = useState('')
@@ -78,7 +78,6 @@ export function Hero() {
     setOs(detectOS())
   }, [])
 
-  const operatingSystem = navigator.userAgent
   return (
     <Container className="pb-16 pt-20 text-center lg:pt-32">
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
