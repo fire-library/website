@@ -3,6 +3,7 @@ import Image, { StaticImageData } from 'next/image'
 
 import calculateImage from '@/images/screenshots/calculate.png'
 import jamie from '@/images/jamie.png'
+import simon from '@/images/simon.png'
 import { Container } from '@/components/Container'
 
 function SwirlyDoodle(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -103,7 +104,7 @@ export function Team() {
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 justify-center gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-2 xl:mx-0 xl:gap-x-8">
           <Plan
             name="Sim&oacute;n Santamaria"
-            image={calculateImage}
+            image={simon}
             text="Sim&oacute;n is a leader with a vision for transformation in fire safety engineering. Holding a Ph.D. in Fire Safety
 Engineering from the University of Edinburgh and a Master’s from the International Masters in Fire Safety
 Engineering program, Simón works as a Technical Director leading the development of over 80 fire safety
