@@ -39,8 +39,8 @@ const buttonText = (os: string) => {
     return 'Download for MacOS (Apple Silicon)'
   if (os === 'MacOS (Intel)') return 'Download for MacOS (Intel)'
   if (os === 'Linux') return 'Download for Linux'
-  if (os === 'Android') return 'Download for Android'
-  if (os === 'iOS') return 'Download for iOS'
+  // if (os === 'Android') return 'Download for Android'
+  // if (os === 'iOS') return 'Download for iOS'
   return 'Download'
 }
 
@@ -69,8 +69,8 @@ export function Hero() {
           return 'MacOS (Intel)'
         }
       }
-      if (/Linux/.test(platform)) return 'Linux'
       if (/Android/.test(userAgent)) return 'Android'
+      if (/Linux/.test(platform)) return 'Linux'
       if (/like Mac/.test(userAgent)) return 'iOS'
       return 'Unknown OS'
     }

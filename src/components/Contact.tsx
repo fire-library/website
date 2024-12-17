@@ -25,8 +25,8 @@ export function Contact() {
             improve.
           </p>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Contact us of leave any feedback you like by leaving a response in
-            our open Google Form:{' '}
+            Contact us or give any feedback you like by leaving a response in
+            our open Google Form{' '}
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLScJMZvo7Hbf6b0ofe4Bmyc4s7rXczVMGNnzb8W70RCM7iIXcw/viewform?usp=header"
               className="text-blue-600"
