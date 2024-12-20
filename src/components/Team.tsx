@@ -107,7 +107,7 @@ export function Team() {
             image={simon}
             text="Sim&oacute;n is a leader with a vision for transformation in fire safety engineering. Holding a Ph.D. in Fire Safety
 Engineering from the University of Edinburgh and a Master’s from the International Masters in Fire Safety
-Engineering program, Simón works as a Technical Director leading the development of over 80 fire safety
+Engineering program, Simón works as a Technical Director at Hydrock, now Stantec leading the development of over 80 fire safety
 professionals. As Vice President of the UK SFPE Chapter and a visiting lecturer at Birmingham City University,
 Simón is dedicated to innovation, quality, and advancing the fire safety industry."
           />
