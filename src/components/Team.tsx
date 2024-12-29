@@ -63,7 +63,9 @@ function Plan({
   text: string
 }) {
   return (
-    <section className={clsx('flex flex-col rounded-3xl px-6 sm:px-8')}>
+    <section
+      className={clsx('flex flex-col items-center rounded-3xl px-6 sm:px-8')}
+    >
       <h3 className="mt-5 font-display text-4xl text-white">{name}</h3>
       <Image
         className="mt-4 w-3/4 rounded-2xl"
@@ -72,7 +74,9 @@ function Plan({
         priority
         sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"
       />
-      <div className="mx-3 mt-4 text-lg text-slate-400">{text}</div>
+      <div className="mx-3 mt-4 text-justify text-lg text-slate-400">
+        {text}
+      </div>
     </section>
   )
 }
@@ -114,7 +118,7 @@ Simón is dedicated to innovation, quality, and advancing the fire safety indust
           <Plan
             name="Jamie Maclean"
             image={jamie}
-            text="A critical thinker and natural innovator, Jamie Maclean brings a unique blend of technical expertise and
+            text="A critical thinker and natural innovator, Jamie brings a unique blend of technical expertise and
 programming skill to OpenFire. With a Ph.D. and MEng in Fire Safety Engineering from the University of
 Edinburgh, Jamie's career spans impactful research and consultancy work, shaping best practices across the
 industry. After switching to a career in software development he now holds a senior position at Gartner. Jamie channels a passion for solving complex problems into creating tools that
