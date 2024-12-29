@@ -5,32 +5,13 @@ import { useEffect, useState } from 'react'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 
+const version = '0.1.11'
+
 const links = {
-  version: '0.1.10',
-  notes: 'See the assets to download this version and install.',
-  pub_date: '2024-12-12T13:06:36.275Z',
-  platforms: {
-    'darwin-aarch64': {
-      signature:
-        'dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSMVlzaWRYYklxVkVHWW16bExTRk9FTTVRNWpxWmNFU05qRlMxQWwyc3lKR3BWcHZXaDZrbll3Qk03RXlxcmRvVFJlL1prYjFVWDVaOWgveEpVdEdpSlpydTFjeHkxaUFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzM0MDA4MTMwCWZpbGU6T3BlbkZpcmUuYXBwLnRhci5negppTHFTdERxSk1rQWFWRnR2c1lwc3J6a0VQN3pGbXRMQkRPTXlsa04rN3NWSkJGdkltQzZjNmsxSytDT2F4dmVaUGR1aDZZTlpsRGpLSmEwR3k0WEJCQT09Cg==',
-      url: 'https://github.com/fire-library/openfire/releases/download/openfire-v0.1.10/OpenFire_aarch64.app.tar.gz',
-    },
-    'darwin-x86_64': {
-      signature:
-        'dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSMVlzaWRYYklxVkNNdnFqOUZzNVkvWmpPamZUVU9vR3lVZ2taK3p6dEpvaEZqdng2V2hoVk9tdGgwYnFrMTFvYkk2UmwvOTZ5cHg5TndFdGZnbHlRSmUxa0Z6UFp6dEE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzM0MDA4MTQ5CWZpbGU6T3BlbkZpcmUuYXBwLnRhci5nego0VUU2QzJjOFZER0FrMUZIc0liMUZxdjkrcXdXS3ZHY2ptQUYycXMzL0drenpQcVlVdDZkY2JXZ1pkaEVVM1lTdkhRWXAvT1c0NmRsd3JrdGl5MElCZz09Cg==',
-      url: 'https://github.com/fire-library/openfire/releases/download/openfire-v0.1.10/OpenFire_x64.app.tar.gz',
-    },
-    'linux-x86_64': {
-      signature:
-        'dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSMVlzaWRYYklxVk9XcGxPQkc4bmdFN01BdkdqTE5wWkxJUXQwbDk1TjJnb2NrLzZFOW9acUhQUUdUT1BMOEwvUmZkVGg0UlNxcGFKVXR3K21NRDdPdnBPVUxscExUWFE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzM0MDA4MzI0CWZpbGU6T3BlbkZpcmVfMC4xLjlfYW1kNjQuQXBwSW1hZ2UKZEdrUlphZHZnMjBjUi9FMTZGSU55bXZnNEo4YTRJTXFLOGhPY2NaRnExc2F6eW9WZ3lGVVJhNzlTOE9hSVdSdGNuM1A3ejdvcHJXc1NmU1h6dGkwQlE9PQo=',
-      url: 'https://github.com/fire-library/openfire/releases/download/openfire-v0.1.10/OpenFire_0.1.10_amd64.AppImage',
-    },
-    'windows-x86_64': {
-      signature:
-        'dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSMVlzaWRYYklxVkh5WTgzancwenVTK0x5ZzdmWGVVbjEwUnJUYVBJOTN0RjFSaTViOE1WQk00aHNhU2ZaSGhrL2xVZGR1N0ZMY0dwaEdrNmlySTRadmZObmM2OUlFRUFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzM0MDA4NzkzCWZpbGU6T3BlbkZpcmVfMC4xLjlfeDY0X2VuLVVTLm1zaQp1cXUxNmlwK0gxOXRyVi9oSjZFK053TGM3ZUlXSGs5SEJBblBoNWRHVHpkMGxTSHJVVXZBRFlLMUtmdUxSYUQ4TUtrd2dTT1dBS0hKL1k3b2FEUlhEUT09Cg==',
-      url: 'https://github.com/fire-library/openfire/releases/download/openfire-v0.1.10/OpenFire_0.1.10_x64_en-US.msi',
-    },
-  },
+  'darwin-aarch64': `https://github.com/fire-library/openfire/releases/download/openfire-v${version}/OpenFire_aarch64.app.tar.gz`,
+  'darwin-x86_64': `https://github.com/fire-library/openfire/releases/download/openfire-v${version}/OpenFire_x64.app.tar.gz`,
+  'linux-x86_64': `https://github.com/fire-library/openfire/releases/download/openfire-v${version}/OpenFire_${version}_amd64.AppImage`,
+  'windows-x86_64': `https://github.com/fire-library/openfire/releases/download/openfire-v${version}/OpenFire_${version}_x64_en-US.msi`,
 }
 
 const buttonText = (os: string) => {
@@ -45,11 +26,10 @@ const buttonText = (os: string) => {
 }
 
 const buttonLink = (os: string) => {
-  if (os === 'Windows') return links.platforms['windows-x86_64'].url
-  if (os === 'MacOS (Apple Silicon)')
-    return links.platforms['darwin-aarch64'].url
-  if (os === 'MacOS (Intel)') return links.platforms['darwin-x86_64'].url
-  if (os === 'Linux') return links.platforms['linux-x86_64'].url
+  if (os === 'Windows') return links['windows-x86_64']
+  if (os === 'MacOS (Apple Silicon)') return links['darwin-aarch64']
+  if (os === 'MacOS (Intel)') return links['darwin-x86_64']
+  if (os === 'Linux') return links['linux-x86_64']
   return 'https://github.com/fire-library/openfire/releases/latest'
 }
 export function Hero() {
