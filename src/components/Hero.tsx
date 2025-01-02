@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 
-const version = '0.1.11'
+const version = '0.1.13'
 
 const links = {
   'darwin-aarch64': `https://github.com/fire-library/openfire/releases/download/openfire-v${version}/OpenFire_aarch64.app.tar.gz`,
